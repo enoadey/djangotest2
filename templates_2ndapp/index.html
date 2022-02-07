@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pull data to database</title>
+</head>
+<body>
+    <center>
+        <h1>How to fetch and view records from postregrsql using django</h1>
+        <h2>Postregsql_Django Web Application</h2>
+        Sum of all product: {{data.sum}} <br>
+        Max price: {{data.max}} <br>
+        Min price: {{data.min}} <br>
+        Avg price per ville: {{data.avg}} <br>
+        <hr/>
+        <table border="1">
+          <tr>
+            <th>bien_immo Id</th>
+            <th>bien_immo id_lot</th>
+            <th>bien_immo nb_piece</th>
+            <th>bien_immo typologie</th>
+            <th>bien_immo prix_tva_reduite</th>
+            <th>bien_immo prix_tva_normale</th>
+            <th>bien_immo prix_HT</th>
+            <th>bien_immo prix_m2_HT</th>
+            <th>bien_immo prix_m2_TTC</th>
+            <th>bien_immo orientation</th>
+            <th>bien_immo exterieur</th>
+            <th>bien_immo balcony</th>
+            <th>bien_immo garden</th>
+            <th>bien_immo parking</th>
+            <th>bien_immo ville</th>
+            <th>bien_immo departement</th>
+            <th>bien_immo date_fin_programme</th>
+            <th>bien_immo adresse_entiere</th>
+            <th>bien_immo date_extraction</th>
+            <th>surface</th>
+            <th>etage</th>
+            <th>nom_programme</th>
+            <th>promoteur</th>
+            <th>index</th>
+
+          </tr>
+          {% for form in form%}
+          <tr>
+            <td>{{form.Id}}</td>
+            <td>{{form.id_lot}}</td>
+            <td>{{form.nb_piece}}</td>
+            <td>{{form.typologie}}</td>
+            <td>{{form.prix_tva_reduite}}</td>
+            <td>{{form.prix_tva_normale}}</td>
+            <td>{{form.prix_HT}}</td>
+            <td>{{form.prix_m2_HT}}</td>
+            <td>{{form.prix_m2_TTC}}</td>
+            <td>{{form.orientation}}</td>
+            <td>{{form.exterieur}}</td>
+            <td>{{form.balcony}}</td>
+            <td>{{form.garden}}</td>
+            <td>{{form.parking}}</td>
+            <td>{{form.ville}}</td>
+            <td>{{form.departement}}</td>
+            <td>{{form.date_fin_programme}}</td>
+            <td>{{form.adresse_entiere}}</td>
+            <td>{{form.date_extraction}}</td>
+            <td>{{form.surface}}</td>
+            <td>{{form.etage}}</td>
+            <td>{{form.nom_programme}}</td>
+            <td>{{form.promoteur}}</td>
+            <td>{{form.Index}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+
+     </center>
+
+</body>
+</html>
